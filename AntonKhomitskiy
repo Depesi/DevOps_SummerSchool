@@ -1,0 +1,23 @@
+#!/bin/bash
+
+name=Anton
+surname=Khomitskiy
+post=anton.tsar02@gmail.com
+regex="^[a-z0-9!#\$%&'*+/=?^_\`{|}~-]+(\.[a-z0-9!#$%&'*+/=?^_\`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
+
+for n in firstFolder secondFolder thirdFolder
+do 
+mkdir "$n"
+done
+
+cd ./firstFolder
+
+echo "$name $surname" > Anton.txt
+
+cd .././thirdFolder
+
+if [[ $post =~ $regex ]] ; then
+    echo $post > Khomitskiy.txt
+else
+    echo post invalid > Khomitskiy.txt 
+fi
