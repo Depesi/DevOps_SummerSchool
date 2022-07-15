@@ -14,7 +14,8 @@ cd ./firstFolder
 
 echo "$name $surname" > Anton.txt
 
-cd .././thirdFolder
+cd ../
+cd ./thirdFolder
 
 if [[ $post =~ $regex ]] ; then
     echo $post > Khomitskiy.txt
